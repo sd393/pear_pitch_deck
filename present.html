@@ -84,7 +84,7 @@ body.idle #hud, body.idle #hint { opacity: 0; }
 body.idle .click-zones > div { cursor: none; }
 </style>
 </head>
-<body>
+<body tabindex="0">
 <div id="stage">
   <div id="frame-wrap">
     <iframe id="frame" tabindex="-1" src="" frameborder="0"></iframe>
@@ -140,14 +140,18 @@ function showFlash(text) {
 
 function go(n, opts = {}) {
   const next = Math.max(0, Math.min(SLIDES.length - 1, n));
-  if (next === idx && frame.src) return;
+  if (next === idx && frame.src) { window.focus(); return; }
   idx = next;
   const slide = SLIDES[idx];
   frame.src = slide.file;
-  if (slide.group === 'main') hud.textContent = `${slide.label} · ${String(MAIN_COUNT).padStart(2,'0')}`;
-  else hud.textContent = `appendix · ${slide.label.replace('a','0')}`;
+  if (slide.group === 'main') {
+    hud.textContent = `${slide.label} · ${String(MAIN_COUNT).padStart(2,'0')}`;
+  } else {
+    hud.textContent = `appendix · ${slide.label.replace('a','0')}`;
+  }
   if (history.replaceState) history.replaceState(null, '', `#${idx + 1}`);
   if (opts.flash) showFlash(slide.label);
+  window.focus();
 }
 
 function fromHash() {
@@ -156,17 +160,22 @@ function fromHash() {
   else go(0);
 }
 
-document.addEventListener('keydown', (e) => {
+function handleKey(e) {
   if (e.metaKey || e.ctrlKey || e.altKey) return;
-  switch(e.key) {
-    case 'ArrowRight': case ' ': case 'PageDown': case 'n': case 'j':
-      e.preventDefault(); go(idx + 1); break;
-    case 'ArrowLeft': case 'PageUp': case 'p': case 'k':
-      e.preventDefault(); go(idx - 1); break;
-    case 'Home': e.preventDefault(); go(0); break;
-    case 'End':  e.preventDefault(); go(SLIDES.length - 1); break;
+  let consumed = true;
+  switch (e.key) {
+    case 'ArrowRight': case 'ArrowDown':
+    case ' ': case 'Spacebar':
+    case 'PageDown': case 'Enter':
+    case 'n': case 'N': case 'j': case 'J':
+      go(idx + 1); break;
+    case 'ArrowLeft': case 'ArrowUp':
+    case 'PageUp': case 'Backspace':
+    case 'p': case 'P': case 'k': case 'K':
+      go(idx - 1); break;
+    case 'Home': go(0); break;
+    case 'End':  go(SLIDES.length - 1); break;
     case 'f': case 'F':
-      e.preventDefault();
       if (!document.fullscreenElement) document.documentElement.requestFullscreen();
       else document.exitFullscreen();
       break;
@@ -179,12 +188,39 @@ document.addEventListener('keydown', (e) => {
     case 'h': case 'H':
       hud.style.opacity = (hud.style.opacity === '0') ? '' : '0'; break;
     case 'a': case 'A':
-      e.preventDefault(); go(MAIN_COUNT, { flash: true }); break;
+      go(MAIN_COUNT, { flash: true }); break;
+    case '0': case '1': case '2': case '3': case '4':
+    case '5': case '6': case '7': case '8': case '9': {
+      const n = parseInt(e.key, 10);
+      go(n === 0 ? 9 : n - 1, { flash: true });
+      break;
+    }
+    default:
+      consumed = false;
   }
-  if (/^[0-9]$/.test(e.key)) {
-    const n = parseInt(e.key, 10);
-    go(n === 0 ? 9 : n - 1, { flash: true });
+  if (consumed) {
+    e.preventDefault();
+    e.stopPropagation();
   }
+}
+
+// Capture-phase listener on the parent so window-level handlers fire even if
+// some descendant tries to swallow the event.
+window.addEventListener('keydown', handleKey, true);
+document.addEventListener('keydown', handleKey, true);
+
+// The iframe's content document has its own event target. Re-attach the same
+// handler each time a slide loads so keystrokes inside the iframe still navigate.
+frame.addEventListener('load', () => {
+  try {
+    const doc = frame.contentDocument;
+    if (!doc) return;
+    doc.removeEventListener('keydown', handleKey, true);
+    doc.addEventListener('keydown', handleKey, true);
+    // Yank focus back so the parent listener stays primary.
+    window.focus();
+    document.body.focus();
+  } catch (err) { /* cross-origin: not a concern for same-origin slides */ }
 });
 
 document.querySelectorAll('.click-zones > div').forEach(z => {
@@ -204,8 +240,10 @@ document.addEventListener('mousemove', showCursor);
 showCursor();
 
 window.addEventListener('hashchange', fromHash);
+window.addEventListener('focus', () => document.body.focus());
 fit();
 fromHash();
+document.body.focus();
 </script>
 </body>
 </html>
