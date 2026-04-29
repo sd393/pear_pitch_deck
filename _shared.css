@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
+@page { size: 20in 11.25in; margin: 0; }
+
 :root {
   --cream: #f6eee3;
   --cream-warm: #f1e6d4;
