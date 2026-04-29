@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --cream: #f6eee3;
+  --cream-warm: #f1e6d4;
+  --cream-deep: #eadbc3;
+  --coral: #e55a4e;
+  --coral-deep: #c84538;
+  --coral-pale: #f8c7bc;
+  --peach: #fbe0cf;
+  --ink: #2a1a12;
+  --ink-soft: #4d3828;
+  --muted-warm: #8a7566;
+  --line: #d9c9b3;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.slide {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  padding: 96px 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-mark {
+  position: absolute;
+  top: 64px;
+  left: 128px;
+  width: 84px;
+  height: 84px;
+}
+
+.logo-mark img { width: 100%; height: 100%; object-fit: contain; }
+
+.footer {
+  position: absolute;
+  bottom: 64px;
+  left: 128px;
+  right: 128px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-warm);
+  font-weight: 500;
+}
+
+.eyebrow {
+  font-size: 16px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  line-height: 1.0;
+}
+
+.accent {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 14px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_shared.css">
+<style>
+html, body { background: var(--cream-warm); }
+.slide { background: var(--cream-warm); justify-content: flex-start; padding-top: 170px; }
+.slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
+.slide .headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 80px;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+  max-width: 26ch;
+  margin-bottom: 56px;
+}
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 1500px;
+  margin-bottom: 48px;
+}
+.bullet {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 28px;
+  align-items: baseline;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.bullet:last-child { border-bottom: none; }
+.bullet .num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 48px;
+  line-height: 1;
+}
+.bullet .text {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 34px;
+  line-height: 1.35;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+.bullet .text strong { color: var(--coral); font-weight: 400; font-style: italic; }
+.tag {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 36px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  max-width: 50ch;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
+  <p class="eyebrow">appendix · 04 — why us</p>
+  <h1 class="headline">we don't have an attention-economics background. we have an <span class="accent">AI capabilities</span> one.</h1>
+  <div class="bullets">
+    <div class="bullet">
+      <div class="num">01</div>
+      <div class="text">the past year: building agent <strong>harnesses</strong> for Mandarins and ARC.</div>
+    </div>
+    <div class="bullet">
+      <div class="num">02</div>
+      <div class="text">research toolkit: <strong>Bayesian inverse planning</strong>, human-AI interaction, decision-making under limited noisy human input.</div>
+    </div>
+    <div class="bullet">
+      <div class="num">03</div>
+      <div class="text">ethan: <strong>8 publications</strong>, patent pending. builds in a day what takes most people a week.</div>
+    </div>
+    <div class="bullet">
+      <div class="num">04</div>
+      <div class="text">most people in this space don't know this toolkit exists.</div>
+    </div>
+  </div>
+  <p class="tag">the proof is in the pudding — 50 creators, 7 brands, $300M, all from cold outreach in a week.</p>
+  <div class="footer">
+    <span>giftly</span>
+    <span>appendix · 04</span>
+  </div>
+</div>
+</body>
+</html>

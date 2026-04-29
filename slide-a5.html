@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_shared.css">
+<style>
+html, body { background: var(--cream); }
+.slide { background: var(--cream); justify-content: flex-start; padding-top: 160px; }
+.slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
+.slide .headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 80px;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+  max-width: 26ch;
+  margin-bottom: 56px;
+}
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 36px;
+  max-width: 1700px;
+  margin-bottom: 56px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card .name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.card .role {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--coral-deep);
+  font-weight: 600;
+}
+.card .bg {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+.card .quote {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 22px;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.tag {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  max-width: 64ch;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
+  <p class="eyebrow">appendix · 05 — the team</p>
+  <h1 class="headline">three founders. one decision rule.</h1>
+  <div class="team">
+    <div class="card">
+      <div class="role">engineering</div>
+      <div class="name">Ethan Zhou</div>
+      <div class="bg">Berkeley · 8 publications · patent pending · ARC + Mandarins agent harness work.</div>
+      <div class="quote">"builds in a day what takes most people a week."</div>
+    </div>
+    <div class="card">
+      <div class="role">strategy + brand</div>
+      <div class="name">Samarjit Deshmukh</div>
+      <div class="bg">Dartmouth · competitive debate · creator outreach + brand conversations + strategy.</div>
+      <div class="quote">"the one in the room when a brand has hard questions."</div>
+    </div>
+    <div class="card">
+      <div class="role">design + curation</div>
+      <div class="name">Armaan Priyadarshan</div>
+      <div class="bg">Dartmouth · math, art, UI/UX · 100+ nights with Samarjit in the CS basement, 11 projects, 3 hackathons.</div>
+      <div class="quote">"the most particular about details most people wouldn't notice."</div>
+    </div>
+  </div>
+  <p class="tag">product → Armaan. strategy → Samarjit. engineering → Ethan. anything cross-cutting, all three.</p>
+  <div class="footer">
+    <span>giftly</span>
+    <span>appendix · 05</span>
+  </div>
+</div>
+</body>
+</html>

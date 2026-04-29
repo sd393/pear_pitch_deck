@@ -1,0 +1,212 @@
+Elevator Pitch
+
+
+We help agents find products you love
+
+
+AI agents are starting to purchase things on our behalf. The trillion-dollar industries that never really worked - advertising, paid promotion, online reviews, SEO/GEO - will collapse entirely. Agents can't tell good products from well-marketed ones. They need ground truth - and whoever owns it owns the next economy.
+
+
+We're building the largest network of human evaluators on earth. They receive products, earn by reviewing them honestly, and generate structured product data that agents can trust. Every agent shopping with our data pays us. In one week, we’ve onboarded 50 evaluators and 7 brands with a combined valuation of $300M.
+Social media creators currently serve as our human evaluators. They receive products from partnered brands, review them, and make content if they love them, earning through affiliate commissions. Brands get authentic content promoting their product. Creators get free samples and only promote them if they believe in them. We take a cut of every sale.
+The future of agentic commerce will run on Giftly.
+________________
+
+
+Why did we decide to pivot? Why are we working on this?
+
+
+Samarjit and I both suffer from seborrheic dermatitis - commonly known as… dandruff. Working long, stressful hours, we have the worst flare-ups at night. One night, working on Mandarins (our previous idea), we were debating dandruff shampoos and generally discussing how hard it is to find something that specifically works for us. I’ve personally spent over 60$ buying dandruff shampoo online on Amazon, and still haven’t found something that works for me. 
+
+
+While this is a specific use case, we got to talking about how these products even reach us anyway. I found most of my products based on what Amazon floated to the top, and we thought this whole process was a bit shady. We came up with a side project idea: a platform that replaces paid collaborations between brands and creators with string-free product gifting, where the creators only make content if they genuinely like and would use the product. We thought this would be better for everyone, so we talked to 10-15 creators about the idea over the span of a couple weeks.
+
+
+A week after launching Giftly, user conversations turned into 50 creators and 7 DTC brands with around $300M total valuation on board. After spending more time just thinking about the idea and AI, we saw a future where it exploded.
+
+
+Pitch Giftly.
+
+
+________________
+
+
+Why now, and why won't OpenAI/Anthropic just do this? Anyone, Mercor, Luel.
+
+
+Why now?
+
+
+Agent-driven shopping has just started to ship (OpenAI Instant Checkout, Operator, Perplexity Shopping, Rufus, Claude+MCP, Gemini). ChatGPT now processes 50 million shopping queries a day. Over a million Shopify merchants are onboarding right now - Glossier, SKIMS, Spanx, Vuori. The infrastructure for buying is built - AGP, UCP, AP2, MCP, A2A. 
+  
+  
+
+
+
+The infrastructure for choosing well isn’t. Thirty percent of online reviews are fake, and this number is growing with increased AI bot spam. [Segment on why reviews are fucked]. Amazon spent $500 million and 8,000 employees on this last year and still let 275 million fake reviews through. Columbia and Yale published a paper last August showing that different AI agents pick different products from the same query, and that sellers making minor tweaks to product descriptions to target AI buyers already see measurable market-share gains. The agents are reading from poisoned data, and the pollution compounds the moment it gets summarized into a single confident recommendation that millions of agents act on. Eighty-three percent of consumers say they don't trust AI shopping agents yet, and they're right not to. 
+
+
+With agentic commerce projected to be valued at $3-5 trillion dollars by 2030, whoever owns the signal will own the next economy. Giftly is that opportunity.
+
+
+  
+
+
+
+
+
+Why can’t other competitors do what we’re doing?
+
+
+Why OpenAI and Anthropic won't do this. Because they've already said they won't, and we should take them at their word. OpenAI's exact language on Instant Checkout is that product results are "organic and unsponsored, ranked purely on relevance," and that merchant payments "don't influence ChatGPT's product results." They cannot also be the trust signal. The moment they pick winners, they lose neutrality, and neutrality is the entire reason people trust ChatGPT to shop. They need an external source of ground truth - and right now they're scraping it from Wirecutter and Reddit, which is exactly the polluted data we started Giftly to replace. We're not their competitor. We’re infrastructure that is missing.
+
+
+Other companies would have to completely uproot their structure, build a network of people and brands, and establish trust. Giftly’s pipeline is not simply a feature; it's an entire company, and it’s hard for me to believe that a company that is doing well already would completely devour itself to implement what we’ve been doing. 
+
+
+
+
+Why are we the ones to do this? What is different about us?
+
+
+We don’t have an attention economics background. We care about AI capabilities and reasoning.
+
+
+Our last year has been spent building around and researching AI agents. For Mandarins and ARC, we were building harnesses. In our personal research, we’ve analyzed human-AI interaction, reverse-engineered decision-making with Bayesian inverse planning, and have dedicated ourselves to answering how agents can make good decisions from limited, noisy human input. We have a toolkit that most people in this space don’t know exists.
+
+
+Also, the proof is in the pudding. We got 50 creators and 7 DTC brands totaling $300 million in valuation onto the platform in a week, from cold outreach alone. The reason this works is that there’s a gap for all parties.
+
+
+
+
+Notes
+* We understand both AI capabilities and how people choose products.
+* Most of my time in high school was spent thinking about how to market my arguments to regular people. It’s the same type of reasoning that goes into pitching products to consumers
+* Armaan spent a ton of time studying good product design as well - he has a background in art, UI/UX, design, etc.
+________________
+
+
+How did we meet? How do we split responsibilities?
+
+
+Armaan and Ethan: met at a Tetris tournament, best friends in high school, built projects from an AP Calculus study companion to an earmold manufacturing business. Samarjit and Armaan: met at a freshman orientation hypnotist show; shared 100+ nights in the CS building basement, 11 projects, and 3 hackathon trips. Samarjit slept in Ethan's dorm during a hackathon. Since April 16th, we've skipped school to live in SF.
+
+
+Ethan runs engineering. He has eight publications and a patent pending, and on the team, he's the one who builds things in a day that would take most people a week. Samarjit runs creator outreach, strategy and brand conversations - what they're building and why. Competitive debate background, which is why he's the one in the room when a brand partner has hard questions. Armaan runs design, brand, and curation. Math, art, and media backgrounds, and the most particular of the three about details most people wouldn't notice.
+Product calls go to Armaan. Strategy to Samarjit. Engineering to Ethan. Anything that touches two of those, all three have to be in.
+________________
+
+
+Prepare for granular questions specific to what we’re building
+
+
+Bring specifics (numbers, figures) about the market gap/research
+
+
+This was done in previous slides.
+________________
+What’s next?
+
+How much money do we need? What will it be going toward?
+
+
+How will we make money? 
+
+
+Who do we sell to? 
+
+
+$500k pre-seed, 12-month runway, 3 technical founders, no external hires
+Bucket
+	$
+	%
+	What
+	Survival
+	$108k
+	22%
+	3 founders × $36k × 12mo ($108k) — SF cost-of-living minimum
+	Scaling
+	$342k
+	68%
+	See below
+	Legal / G&A
+	$25k
+	5%
+	Contracts, FTC disclosure compliance, contributor agreements
+	Reserve
+	$25k
+	5%
+	Tight; we'd rather come back than over-ask
+	Total
+	$500k
+	
+
+	
+
+	Scaling block ($342k), zero engineering spend — founders build
+Line
+	$
+	What it specifically buys
+	Brand acquisition (7 → 500)
+	$130k
+	Outbound infra at volume: Smartlead/Instantly + Apollo/Clay + 40 warmed sending accounts ($60k) · Founder-led BD travel: Shoptalk March 2027, NRF Jan 2027, AI Engineer Summit ($35k) · Sales tooling + CRM ($15k) · Commission pool for referrals from creator agencies and DTC accelerators ($20k)
+	Agent integration + eval moat
+	$100k
+	Eval infrastructure + bench tests measuring "agent recommendation quality with vs. without Giftly signal" ($50k LLM API + tooling) · Conferences and featured-partner positioning (AI Engineer Summit, Anthropic events, Shoptalk) ($35k) · Co-marketing with Stripe ACP, Shopify ChatGPT channel, Anthropic MCP directory ($15k)
+	Contributor network (50 → 10,000)
+	$55k
+	Referral bonuses tiered by contributor type ($20 creator / $40 expert reviewer): ~$40k for ~2,000 paid referrals · Verification + fraud detection + ops tooling ($15k)
+	Platform + data infra
+	$35k
+	LLM API spend (matching, signal scoring, eval generation) ($25k) · Supabase / Vercel / monitoring ($7k) · Eval-data warehouse ($3k)
+	Content + credibility
+	$22k
+	Co-authored research paper with Dartmouth/MIT/Stanford on Giftly signal improving agent decisions, arXiv preprint by month 6 ($14k) · PR + case studies ($8k)
+	Roadmap
+Pre-PearX (now → July 2026, ~10 weeks)
+* v1 product live: creator portal, brand portal, gifting workflow, content delivery
+* 50 → 2,500 contributors (creators only at this stage), 7 → 200 brands (~$3B cumulative valuation)
+* 500+ completed brand-contributor matches
+* MCP server v1 live, ingesting signal
+* Eval study v0 on internal benchmark
+PearX — weeks 1–12 (July → October 2026)
+Week 4: 5,000 contributors. 300 brands. ChatGPT App submitted to OpenAI. Expert reviewer pilot launches — first 50 verified non-creator evaluators (estheticians, audiologists, mechanical engineers, chefs) onboarded.
+Week 8: 7,500 contributors (~7,000 creators + 500 expert reviewers). 400 brands. ChatGPT App live. Eval study v1 showing ≥20% improvement on public rubric. $150k/month GMV.
+Week 12 — Demo Day:
+* 10,000 contributors on platform across 3 contributor classes (creators, expert reviewers, verified power-users)
+* 500 brands signed, ≥$5B cumulative valuation
+* MCP server + ChatGPT App + Perplexity Plugin live, 4+ agent surface integrations
+* Eval study preprinted on arXiv
+* $300k/month GMV run-rate
+* 25+ brands paying for premium signal access
+* $60k MRR
+Months 4–12 (October 2026 → July 2027)
+Month 6:
+* Claude + Gemini integrations shipped
+* 15,000 contributors, 800 brands
+* Expert reviewer network covers 15+ specialty verticals
+* $600k/month GMV, $180k MRR
+Month 9:
+* 22,000 contributors, 1,200 brands
+* Eval paper accepted at workshop venue
+* $1M/month GMV, $400k MRR
+Month 12 — seed round closed: $5–8M target
+* 30,000+ contributors, 1,800+ brands
+* 5+ agent surface integrations live
+* $1.5M/month GMV, $600k MRR
+* Featured in OpenAI, Anthropic, or Perplexity case studies
+* First enterprise contracts: brands paying $50k+/year for guaranteed signal coverage
+The 5-year arc
+Mercor built the human-expertise layer that frontier AI labs run on for capability training. Giftly is building the human-trust layer that frontier AI agents run on for commerce decisions. Same shape — humans as infrastructure for AI — but a different customer, a different signal, and a market an order of magnitude larger.
+By year 5, every brand selling through agent surfaces is on Giftly because invisibility means non-existence in agent-mediated commerce. Every human with verifiable expertise — creators, professionals, domain experts, verified buyers — is enlistable as an evaluator with auditable provenance. The signal we generate is the default trust layer the labs query when ranking products, the way Stripe became the default payment layer the labs query when transacting.
+Three-layer agent commerce stack: transaction (Stripe), identity (Cloudflare + labs), trust (Giftly). Mercor for trust. $5T market by 2030.
+
+
+________________
+
+
+How do we know there’s product-market fit?
+
+
+We are still figuring this out, but are amidst mass outreach to agent tooling/procurement agent companies like Firecrawl, Browserless, OneOff, doji, PayOS, Skyfire.

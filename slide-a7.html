@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_shared.css">
+<style>
+html, body { background: var(--cream); }
+.slide { background: var(--cream); justify-content: flex-start; padding-top: 140px; }
+.slide .eyebrow { margin-bottom: 24px; color: var(--coral-deep); }
+.slide .headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 72px;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+  max-width: 24ch;
+  margin-bottom: 48px;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 1700px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr;
+  gap: 28px;
+  align-items: baseline;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.row:last-child { border-bottom: none; }
+.row .when {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.row .what {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 23px;
+  line-height: 1.4;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+.row .metrics {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.row .metrics strong { color: var(--coral); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
+  <p class="eyebrow">appendix · 07 — the path</p>
+  <h1 class="headline">from now to series A in <span class="accent">15 months</span>.</h1>
+  <div class="timeline">
+    <div class="row">
+      <div class="when">pre-PearX<br>now → Jul 2026</div>
+      <div class="what">v1 product live: creator + brand portals, gifting workflow, MCP server v1 ingesting signal. eval study v0.</div>
+      <div class="metrics"><strong>2,500</strong> contributors<br><strong>200</strong> brands · ~$3B valuation<br><strong>500+</strong> matches completed</div>
+    </div>
+    <div class="row">
+      <div class="when">PearX demo day<br>Oct 2026</div>
+      <div class="what">ChatGPT App + Perplexity Plugin live. 5+ agent surface integrations. eval study v1 ≥20% improvement on public rubric.</div>
+      <div class="metrics"><strong>12,000</strong> contributors (creators + experts + power-users)<br><strong>1,000</strong> brands · ≥$10B<br><strong>$600k/mo</strong> GMV · <strong>$150k</strong> MRR</div>
+    </div>
+    <div class="row">
+      <div class="when">month 9<br>Apr 2027</div>
+      <div class="what">Claude + Gemini integrations. eval paper accepted at workshop. seed round closed $5–8M.</div>
+      <div class="metrics"><strong>30,000</strong> contributors<br><strong>1,500</strong> brands<br><strong>$2M/mo</strong> GMV · <strong>$750k</strong> MRR</div>
+    </div>
+    <div class="row">
+      <div class="when">month 15<br>Oct 2027 — series A</div>
+      <div class="what">7+ agent surface integrations. featured in OpenAI / Anthropic / Perplexity case studies. enterprise contracts ($50k+/yr).</div>
+      <div class="metrics"><strong>80,000+</strong> contributors<br><strong>4,000+</strong> brands<br><strong>$3M+</strong> ARR · <strong>$50M+</strong> annualized GMV</div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>giftly</span>
+    <span>appendix · 07</span>
+  </div>
+</div>
+</body>
+</html>

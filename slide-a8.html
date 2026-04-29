@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_shared.css">
+<style>
+html, body { background: var(--cream); }
+.slide { background: var(--cream); justify-content: flex-start; padding-top: 160px; }
+.slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
+.slide .headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 84px;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+  max-width: 22ch;
+  margin-bottom: 56px;
+}
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  max-width: 1700px;
+  margin-bottom: 48px;
+}
+.col h3 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted-warm);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.bucket-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 24px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.bucket-row .name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 28px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.bucket-row .pct {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 18px;
+  color: var(--muted-warm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.bucket-row .amt {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  color: var(--coral);
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  min-width: 100px;
+  text-align: right;
+}
+.scaling-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.scaling-line:last-child { border-bottom: none; }
+.scaling-line .what {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22px;
+  color: var(--ink);
+  line-height: 1.35;
+  font-weight: 400;
+}
+.scaling-line .amt {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  color: var(--coral);
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+.tag {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  max-width: 56ch;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
+  <p class="eyebrow">appendix · 08 — what we need</p>
+  <h1 class="headline"><span class="accent">$1.2M</span>. 15 months. zero engineering hires.</h1>
+  <div class="cols">
+    <div class="col">
+      <h3>buckets</h3>
+      <div class="bucket-row"><span class="name">survival</span><span class="pct">31%</span><span class="amt">$375k</span></div>
+      <div class="bucket-row"><span class="name">scaling</span><span class="pct">58%</span><span class="amt">$700k</span></div>
+      <div class="bucket-row"><span class="name">legal / G&amp;A</span><span class="pct">4%</span><span class="amt">$50k</span></div>
+      <div class="bucket-row"><span class="name">reserve</span><span class="pct">6%</span><span class="amt">$75k</span></div>
+    </div>
+    <div class="col">
+      <h3>scaling block</h3>
+      <div class="scaling-line"><span class="what">brand acquisition (7 → 1,500+)</span><span class="amt">$275k</span></div>
+      <div class="scaling-line"><span class="what">agent integration + eval moat</span><span class="amt">$200k</span></div>
+      <div class="scaling-line"><span class="what">contributor network (50 → 25,000)</span><span class="amt">$130k</span></div>
+      <div class="scaling-line"><span class="what">platform + data infra</span><span class="amt">$50k</span></div>
+      <div class="scaling-line"><span class="what">content + credibility (research paper, PR)</span><span class="amt">$45k</span></div>
+    </div>
+  </div>
+  <p class="tag">3 founders × $50k × 15 mo + 1 sr. brand BD lead (mo. 3) + 1 contributor ops lead (mo. 7). founders build. capital scales the network.</p>
+  <div class="footer">
+    <span>giftly</span>
+    <span>appendix · 08</span>
+  </div>
+</div>
+</body>
+</html>

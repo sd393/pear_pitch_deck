@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_shared.css">
+<style>
+html, body { background: var(--cream); }
+.slide { background: var(--cream); justify-content: flex-start; padding-top: 160px; }
+.slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
+.slide .headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 76px;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+  max-width: 26ch;
+  margin-bottom: 56px;
+}
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1600px;
+  margin-bottom: 48px;
+}
+.col h3 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted-warm);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.col ul { list-style: none; }
+.col li {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 30px;
+  line-height: 1.4;
+  color: var(--ink);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: 400;
+}
+.col li:last-child { border-bottom: none; }
+.stat-row {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.stat-row .num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 44px;
+  letter-spacing: -0.02em;
+}
+.stat-row .text {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 26px;
+  color: var(--ink-soft);
+  line-height: 1.3;
+}
+.tag {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 36px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  max-width: 50ch;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
+  <p class="eyebrow">appendix · 01 — why now</p>
+  <h1 class="headline">the infrastructure for buying is built. the infrastructure for <span class="accent">choosing</span> isn't.</h1>
+  <div class="cols">
+    <div class="col">
+      <h3>agentic commerce shipping in 2026</h3>
+      <ul>
+        <li>ChatGPT Instant Checkout</li>
+        <li>OpenAI Operator</li>
+        <li>Perplexity Shopping</li>
+        <li>Claude + MCP</li>
+        <li>Amazon Rufus</li>
+        <li>Gemini Shopping</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>the market signal</h3>
+      <ul>
+        <li><div class="stat-row"><span class="num">50M</span><span class="text">ChatGPT shopping queries / day</span></div></li>
+        <li><div class="stat-row"><span class="num">1M+</span><span class="text">Shopify merchants onboarding (Glossier, SKIMS, Spanx, Vuori)</span></div></li>
+        <li><div class="stat-row"><span class="num">$3–5T</span><span class="text">agentic commerce projected by 2030</span></div></li>
+        <li><div class="stat-row"><span class="num">AGP · UCP · AP2 · MCP · A2A</span></div></li>
+      </ul>
+    </div>
+  </div>
+  <p class="tag">whoever owns ground truth owns the next economy.</p>
+  <div class="footer">
+    <span>giftly</span>
+    <span>appendix · 01</span>
+  </div>
+</div>
+</body>
+</html>
