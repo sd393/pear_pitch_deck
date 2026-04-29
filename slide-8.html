@@ -4,141 +4,115 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="_shared.css">
 <style>
-html, body { background: var(--cream); }
-.slide { background: var(--cream); justify-content: flex-start; padding-top: 160px; }
+html, body { background: var(--cream-warm); }
+.slide { background: var(--cream-warm); justify-content: flex-start; padding-top: 140px; }
 .slide .eyebrow { margin-bottom: 24px; }
 .slide .headline {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: 88px;
+  font-size: 76px;
   letter-spacing: -0.022em;
   line-height: 1.05;
   max-width: 24ch;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 }
-.cols {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 80px;
-  max-width: 1700px;
-  margin-bottom: 36px;
-}
-.col h3 {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--muted-warm);
-  margin-bottom: 18px;
-  font-weight: 500;
-}
-.bucket-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
+.timeline {
+  display: flex;
+  flex-direction: column;
   gap: 24px;
+  max-width: 1700px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 36px;
   align-items: baseline;
-  padding: 14px 0;
+  padding-bottom: 22px;
   border-bottom: 1px solid var(--line);
 }
-.bucket-row .name {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 28px;
-  color: var(--ink);
-  font-weight: 400;
-  line-height: 1.15;
-}
-.bucket-row .name small {
-  display: block;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 13px;
-  color: var(--muted-warm);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  margin-top: 6px;
-  line-height: 1.35;
-}
-.bucket-row .amt {
+.row:last-child { border-bottom: none; padding-bottom: 0; }
+.row .when {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
-  color: var(--coral);
-  font-size: 32px;
   font-weight: 300;
-  letter-spacing: -0.015em;
-  min-width: 100px;
-  text-align: right;
+  color: var(--coral);
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
-.scaling-line {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 16px;
-  align-items: baseline;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
+.row .when strong {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--coral);
+  display: block;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-top: 6px;
 }
-.scaling-line:last-child { border-bottom: none; }
-.scaling-line .what {
+.row .what ul { list-style: none; }
+.row .what li {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 22px;
-  color: var(--ink);
-  line-height: 1.3;
-  font-weight: 400;
-}
-.scaling-line .what small {
-  display: block;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 12.5px;
-  color: var(--muted-warm);
-  margin-top: 4px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
   line-height: 1.4;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 8px;
 }
-.scaling-line .amt {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
+.row .what li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
   color: var(--coral);
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: -0.01em;
-  min-width: 80px;
-  text-align: right;
 }
-.tag {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-weight: 300;
-  color: var(--coral);
-  font-size: 28px;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  max-width: 80ch;
-}
+.row .what li:last-child { margin-bottom: 0; }
+.row .what strong { color: var(--coral); font-weight: 400; font-style: italic; }
 </style>
 </head>
 <body>
 <div class="slide">
   <div class="logo-mark"><img src="giftly_logo.png" alt=""></div>
-  <p class="eyebrow">what we need</p>
-  <h1 class="headline"><span class="accent">$250k</span>. 12-month runway. 3 technical founders.</h1>
-  <div class="cols">
-    <div class="col">
-      <h3>buckets</h3>
-      <div class="bucket-row"><span class="name">survival<small>3 founders × $36k × 12mo · SF cost-of-living minimum</small></span><span class="amt">$108k</span></div>
-      <div class="bucket-row"><span class="name">GTM + scaling<small>see right →</small></span><span class="amt">$112k</span></div>
-      <div class="bucket-row"><span class="name">legal / G&amp;A<small>Clerky · contributor agreements · FTC compliance</small></span><span class="amt">$15k</span></div>
-      <div class="bucket-row"><span class="name">reserve<small>tight on purpose</small></span><span class="amt">$15k</span></div>
+  <p class="eyebrow">the path</p>
+  <h1 class="headline">three phases. <span class="accent">12 months</span> to seed.</h1>
+  <div class="timeline">
+    <div class="row">
+      <div class="when">pre-PearX<br><strong>now → Jul 2026</strong></div>
+      <div class="what">
+        <ul>
+          <li>contributor network <strong>50 → 5,000</strong>, brand network <strong>7 → 300</strong> — all organic</li>
+          <li>ship v1 product: creator + brand portals, gifting workflow</li>
+          <li>first <strong>MCP integration</strong> live</li>
+        </ul>
+      </div>
     </div>
-    <div class="col">
-      <h3>scaling block ($112k)</h3>
-      <div class="scaling-line"><span class="what">brand acquisition<small>Smartlead + Apollo + Clay + 20 warmed sending accounts ($25k) · founder-led BD travel ($15k)</small></span><span class="amt">$40k</span></div>
-      <div class="scaling-line"><span class="what">agent integration + trust study<small>LLM API for eval bench + matching ($45k) · integration tooling ($5k) · AI Engineer Summit + Anthropic event ($5k)</small></span><span class="amt">$55k</span></div>
-      <div class="scaling-line"><span class="what">platform + verification<small>Supabase + Vercel + monitoring + domains ($7k) · contributor verification, fraud detection, identity attestation ($10k)</small></span><span class="amt">$17k</span></div>
+    <div class="row">
+      <div class="when">PearX<br><strong>Jul → Oct 2026</strong></div>
+      <div class="what">
+        <ul>
+          <li><strong>3+ live agent integrations</strong> with public case studies — ChatGPT App, Perplexity Plugin, Claude integration</li>
+          <li><strong>10,000+ contributors</strong> (creators + expert evaluators), <strong>500+ brands</strong>, all organic</li>
+          <li>trust study preprinted on arXiv by Demo Day — "people trust agent recommendations more when those recommendations read Giftly signal"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">post-Demo Day<br><strong>Oct 2026 → Jul 2027</strong></div>
+      <div class="what">
+        <ul>
+          <li>trust study peer-reviewed</li>
+          <li><strong>4+ agent surfaces</strong> live with measurable share of recommendations</li>
+          <li>network compounds: <strong>1,500+ brands</strong>, expert evaluators across <strong>15+ verticals</strong></li>
+          <li>seed round closed at <strong>$5–8M</strong></li>
+        </ul>
+      </div>
     </div>
   </div>
-  <p class="tag">3 technical founders. founders build. capital pays for the network and the trust study.</p>
   <div class="footer">
     <span>giftly</span>
-    <span>08 · 09</span>
+    <span>08 · 10</span>
   </div>
 </div>
 </body>

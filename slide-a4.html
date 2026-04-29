@@ -5,111 +5,148 @@
 <link rel="stylesheet" href="_shared.css">
 <style>
 html, body { background: var(--cream-warm); }
-.slide { background: var(--cream-warm); justify-content: flex-start; padding-top: 140px; }
-.slide .eyebrow { margin-bottom: 24px; color: var(--coral-deep); }
+.slide { background: var(--cream-warm); justify-content: flex-start; padding-top: 160px; }
+.slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
 .slide .headline {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: 76px;
+  font-size: 80px;
   letter-spacing: -0.022em;
   line-height: 1.05;
-  max-width: 24ch;
+  max-width: 26ch;
   margin-bottom: 48px;
 }
-.timeline {
-  display: flex;
-  flex-direction: column;
+.stages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
   max-width: 1700px;
+  margin-bottom: 36px;
 }
-.row {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 36px;
-  align-items: baseline;
-  padding-bottom: 22px;
-  border-bottom: 1px solid var(--line);
+.stage {
+  background: rgba(255,255,255,0.5);
+  border: 1px solid var(--line);
+  padding: 24px 22px;
 }
-.row:last-child { border-bottom: none; padding-bottom: 0; }
-.row .when {
+.stage .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--coral-deep);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.stage .name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+.stage .desc {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 18px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  font-weight: 400;
+}
+.stage .where {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
+  font-size: 18px;
+  color: var(--coral);
+  margin-top: 12px;
   font-weight: 300;
-  color: var(--coral);
-  font-size: 30px;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
-.row .when strong {
-  font-style: normal;
-  font-weight: 400;
-  color: var(--coral);
-  display: block;
-  font-size: 20px;
-  letter-spacing: 0.02em;
+.signals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 60px;
+  max-width: 1700px;
+  margin-bottom: 36px;
+}
+.signal-col h3 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin-top: 6px;
+  color: var(--muted-warm);
+  font-weight: 500;
+  margin-bottom: 14px;
 }
-.row .what ul { list-style: none; }
-.row .what li {
+.signal-col ul { list-style: none; }
+.signal-col li {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 22px;
   line-height: 1.4;
   color: var(--ink);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
   font-weight: 400;
-  letter-spacing: -0.005em;
-  position: relative;
-  padding-left: 28px;
-  margin-bottom: 8px;
 }
-.row .what li::before {
-  content: "→";
-  position: absolute;
-  left: 0;
+.signal-col li:last-child { border-bottom: none; }
+.signal-col li strong { color: var(--coral); font-weight: 400; font-style: italic; }
+.tag {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
   color: var(--coral);
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
 }
-.row .what li:last-child { margin-bottom: 0; }
-.row .what strong { color: var(--coral); font-weight: 400; font-style: italic; }
 </style>
 </head>
 <body>
 <div class="slide">
   <div class="logo-mark"><img src="giftly_logo.png" alt=""></div>
-  <p class="eyebrow">appendix · 04 — the path</p>
-  <h1 class="headline">three phases. <span class="accent">12 months</span> to seed.</h1>
-  <div class="timeline">
-    <div class="row">
-      <div class="when">pre-PearX<br><strong>now → Jul 2026</strong></div>
-      <div class="what">
-        <ul>
-          <li>contributor network <strong>50 → 5,000</strong>, brand network <strong>7 → 300</strong> — all organic</li>
-          <li>ship v1 product: creator + brand portals, gifting workflow</li>
-          <li>first <strong>MCP integration</strong> live</li>
-        </ul>
-      </div>
+  <p class="eyebrow">appendix · 04 — pmf</p>
+  <h1 class="headline">early <span class="accent">signals</span>, not yet PMF.</h1>
+  <div class="stages">
+    <div class="stage">
+      <div class="label">stage 1</div>
+      <div class="name">wedge PMF</div>
+      <div class="desc">brand × creator marketplace works — CPA contracts close, commissions flow, both sides return.</div>
+      <div class="where">→ early signals</div>
     </div>
-    <div class="row">
-      <div class="when">PearX<br><strong>Jul → Oct 2026</strong></div>
-      <div class="what">
-        <ul>
-          <li><strong>3+ live agent integrations</strong> with public case studies — ChatGPT App, Perplexity Plugin, Claude integration</li>
-          <li><strong>10,000+ contributors</strong> (creators + expert evaluators), <strong>500+ brands</strong>, all organic</li>
-          <li>trust study preprinted on arXiv by Demo Day — "people trust agent recommendations more when those recommendations read Giftly signal"</li>
-        </ul>
-      </div>
+    <div class="stage">
+      <div class="label">stage 2</div>
+      <div class="name">data PMF</div>
+      <div class="desc">eval dataset large + structured enough to answer interesting product-quality queries.</div>
+      <div class="where">→ ~1k+ structured records</div>
     </div>
-    <div class="row">
-      <div class="when">post-Demo Day<br><strong>Oct 2026 → Jul 2027</strong></div>
-      <div class="what">
-        <ul>
-          <li>trust study peer-reviewed</li>
-          <li><strong>4+ agent surfaces</strong> live with measurable share of recommendations</li>
-          <li>network compounds: <strong>1,500+ brands</strong>, expert evaluators across <strong>15+ verticals</strong></li>
-          <li>seed round closed at <strong>$5–8M</strong></li>
-        </ul>
-      </div>
+    <div class="stage">
+      <div class="label">stage 3</div>
+      <div class="name">agent PMF</div>
+      <div class="desc">agents query API in production. turning it off would visibly degrade their recommendations.</div>
+      <div class="where">→ outreach in motion</div>
     </div>
   </div>
+  <div class="signals">
+    <div class="signal-col">
+      <h3>defensible early signals</h3>
+      <ul>
+        <li><strong>0.67%</strong> brand cold-conversion (7/1,043) · solid for B2B</li>
+        <li><strong>Apollo Neuro</strong> inbound CPA offer — willingness-to-pay, unprompted</li>
+        <li><strong>$300M</strong> partner-tier resonance in 1 week</li>
+        <li><strong>1,043</strong> brands in active outreach</li>
+      </ul>
+    </div>
+    <div class="signal-col">
+      <h3>leading indicators we'll prove out</h3>
+      <ul>
+        <li>first revshare check (closes unit-economic loop)</li>
+        <li>first inbound brand inquiry</li>
+        <li>creator-to-creator referrals</li>
+        <li>first agent partner technical conversation</li>
+      </ul>
+    </div>
+  </div>
+  <p class="tag">in active outreach: Firecrawl · Browserless · OneOff · doji · PayOS · Skyfire.</p>
   <div class="footer">
     <span>giftly</span>
     <span>appendix · 04</span>

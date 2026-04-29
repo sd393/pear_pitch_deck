@@ -7,8 +7,33 @@
 <style>
 html, body { width: auto; height: auto; min-height: 100vh; overflow: auto; }
 body { padding: 56px 64px; }
-h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 56px; letter-spacing: -0.022em; margin-bottom: 8px; }
-.sub { font-family: 'Instrument Sans', sans-serif; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-warm); margin-bottom: 40px; }
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.head .left h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 56px; letter-spacing: -0.022em; margin-bottom: 8px; }
+.head .left .sub { font-family: 'Instrument Sans', sans-serif; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-warm); }
+.actions { display: flex; gap: 12px; align-items: center; }
+.actions a {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 14px 26px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: #fff;
+  transition: background 0.15s, color 0.15s;
+}
+.actions a:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.actions a.primary { background: var(--coral); color: #fff; border-color: var(--coral); }
+.actions a.primary:hover { background: var(--coral-deep); border-color: var(--coral-deep); color: #fff; }
 h2 { font-family: 'Instrument Sans', sans-serif; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted-warm); font-weight: 500; margin: 32px 0 16px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 a.card {
@@ -27,11 +52,42 @@ a.card .meta { padding: 14px 16px; display: flex; justify-content: space-between
 a.card .name { font-family: 'Fraunces', Georgia, serif; font-size: 20px; }
 a.card .id { font-family: 'Instrument Sans', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-warm); }
 .onepager .thumb { aspect-ratio: 8.5/11; background-size: cover; }
+.help {
+  margin-top: 48px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.5);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 900px;
+}
+.help strong { color: var(--ink); font-weight: 600; }
+.help kbd {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-radius: 3px;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 11px;
+  margin: 0 2px;
+}
 </style>
 </head>
 <body>
-<h1>giftly</h1>
-<div class="sub">deck · live preview</div>
+<div class="head">
+  <div class="left">
+    <h1>giftly</h1>
+    <div class="sub">deck · live preview</div>
+  </div>
+  <div class="actions">
+    <a href="giftly-pitch.pdf" target="_blank">PDF</a>
+    <a href="onepager.html">One-pager</a>
+    <a class="primary" href="present.html">▶ Present</a>
+  </div>
+</div>
 
 <h2>Main deck</h2>
 <div class="grid">
@@ -42,8 +98,9 @@ a.card .id { font-family: 'Instrument Sans', sans-serif; font-size: 11px; letter
   <a class="card" href="slide-5.html"><div class="thumb" style="background-image:url('slide-5.png')"></div><div class="meta"><span class="name">trust layer</span><span class="id">05</span></div></a>
   <a class="card" href="slide-6.html"><div class="thumb" style="background-image:url('slide-6.png')"></div><div class="meta"><span class="name">how it works</span><span class="id">06</span></div></a>
   <a class="card" href="slide-7.html"><div class="thumb" style="background-image:url('slide-7.png')"></div><div class="meta"><span class="name">traction</span><span class="id">07</span></div></a>
-  <a class="card" href="slide-8.html"><div class="thumb" style="background-image:url('slide-8.png')"></div><div class="meta"><span class="name">what we need</span><span class="id">08</span></div></a>
-  <a class="card" href="slide-9.html"><div class="thumb" style="background-image:url('slide-9.png')"></div><div class="meta"><span class="name">closing</span><span class="id">09</span></div></a>
+  <a class="card" href="slide-8.html"><div class="thumb" style="background-image:url('slide-8.png')"></div><div class="meta"><span class="name">the path</span><span class="id">08</span></div></a>
+  <a class="card" href="slide-9.html"><div class="thumb" style="background-image:url('slide-9.png')"></div><div class="meta"><span class="name">what we need</span><span class="id">09</span></div></a>
+  <a class="card" href="slide-10.html"><div class="thumb" style="background-image:url('slide-10.png')"></div><div class="meta"><span class="name">closing</span><span class="id">10</span></div></a>
 </div>
 
 <h2>Appendix</h2>
@@ -51,13 +108,24 @@ a.card .id { font-family: 'Instrument Sans', sans-serif; font-size: 11px; letter
   <a class="card" href="slide-a1.html"><div class="thumb" style="background-image:url('slide-a1.png')"></div><div class="meta"><span class="name">why not labs</span><span class="id">a1</span></div></a>
   <a class="card" href="slide-a2.html"><div class="thumb" style="background-image:url('slide-a2.png')"></div><div class="meta"><span class="name">why not Mercor</span><span class="id">a2</span></div></a>
   <a class="card" href="slide-a3.html"><div class="thumb" style="background-image:url('slide-a3.png')"></div><div class="meta"><span class="name">team / why us</span><span class="id">a3</span></div></a>
-  <a class="card" href="slide-a4.html"><div class="thumb" style="background-image:url('slide-a4.png')"></div><div class="meta"><span class="name">the path</span><span class="id">a4</span></div></a>
-  <a class="card" href="slide-a5.html"><div class="thumb" style="background-image:url('slide-a5.png')"></div><div class="meta"><span class="name">pmf</span><span class="id">a5</span></div></a>
+  <a class="card" href="slide-a4.html"><div class="thumb" style="background-image:url('slide-a4.png')"></div><div class="meta"><span class="name">pmf</span><span class="id">a4</span></div></a>
 </div>
 
 <h2>One-pager</h2>
 <div class="grid">
   <a class="card onepager" href="onepager.html"><div class="thumb" style="background-image:url('giftly-onepager-preview.png')"></div><div class="meta"><span class="name">one-pager</span><span class="id">letter</span></div></a>
+</div>
+
+<div class="help">
+  <strong>Presenter shortcuts</strong> — click <span style="color:var(--coral)">▶ Present</span> above to launch.
+  <kbd>→</kbd> / <kbd>Space</kbd> next ·
+  <kbd>←</kbd> prev ·
+  <kbd>F</kbd> fullscreen ·
+  <kbd>1</kbd>–<kbd>9</kbd> jump ·
+  <kbd>0</kbd> slide 10 ·
+  <kbd>A</kbd> jump to appendix ·
+  <kbd>G</kbd> back to gallery ·
+  <kbd>Esc</kbd> exit
 </div>
 </body>
 </html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Giftly · Present</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: #1a0f0a;
+  color: #f6eee3;
+  font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+}
+#stage {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+#frame-wrap {
+  width: 1920px; height: 1080px;
+  transform-origin: center center;
+  flex-shrink: 0;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+}
+#frame {
+  width: 1920px; height: 1080px;
+  border: none; display: block;
+  pointer-events: none;
+}
+#hud {
+  position: fixed;
+  bottom: 14px;
+  right: 24px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(246,238,227,0.45);
+  pointer-events: none;
+  font-weight: 500;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+#hint {
+  position: fixed;
+  bottom: 14px;
+  left: 24px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(246,238,227,0.32);
+  font-weight: 500;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+body.idle { cursor: none; }
+body.idle #hud, body.idle #hint { opacity: 0; }
+#flash {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 88px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  color: rgba(246,238,227,0.85);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  letter-spacing: -0.02em;
+  z-index: 20;
+}
+#flash.show { opacity: 1; }
+.click-zones {
+  position: fixed; inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 5;
+}
+.click-zones > div { cursor: pointer; }
+.click-zones > .left { cursor: w-resize; }
+.click-zones > .right { cursor: e-resize; }
+body.idle .click-zones > div { cursor: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="frame-wrap">
+    <iframe id="frame" tabindex="-1" src="" frameborder="0"></iframe>
+  </div>
+</div>
+<div class="click-zones">
+  <div class="left"  data-action="prev"></div>
+  <div class="right" data-action="next"></div>
+</div>
+<div id="hud">01 · 10</div>
+<div id="hint">→ next  ·  ← prev  ·  F fullscreen  ·  G gallery  ·  Esc exit  ·  H toggle hud</div>
+<div id="flash"></div>
+
+<script>
+const SLIDES = [
+  { file: 'slide-1.html',  group: 'main', label: '01' },
+  { file: 'slide-2.html',  group: 'main', label: '02' },
+  { file: 'slide-3.html',  group: 'main', label: '03' },
+  { file: 'slide-4.html',  group: 'main', label: '04' },
+  { file: 'slide-5.html',  group: 'main', label: '05' },
+  { file: 'slide-6.html',  group: 'main', label: '06' },
+  { file: 'slide-7.html',  group: 'main', label: '07' },
+  { file: 'slide-8.html',  group: 'main', label: '08' },
+  { file: 'slide-9.html',  group: 'main', label: '09' },
+  { file: 'slide-10.html', group: 'main', label: '10' },
+  { file: 'slide-a1.html', group: 'apx',  label: 'a1' },
+  { file: 'slide-a2.html', group: 'apx',  label: 'a2' },
+  { file: 'slide-a3.html', group: 'apx',  label: 'a3' },
+  { file: 'slide-a4.html', group: 'apx',  label: 'a4' }
+];
+const MAIN_COUNT = SLIDES.filter(s => s.group === 'main').length;
+
+let idx = 0;
+
+const frame = document.getElementById('frame');
+const wrap  = document.getElementById('frame-wrap');
+const hud   = document.getElementById('hud');
+const flash = document.getElementById('flash');
+
+function fit() {
+  const sx = window.innerWidth  / 1920;
+  const sy = window.innerHeight / 1080;
+  wrap.style.transform = `scale(${Math.min(sx, sy)})`;
+}
+window.addEventListener('resize', fit);
+
+function showFlash(text) {
+  flash.textContent = text;
+  flash.classList.add('show');
+  clearTimeout(showFlash._t);
+  showFlash._t = setTimeout(() => flash.classList.remove('show'), 700);
+}
+
+function go(n, opts = {}) {
+  const next = Math.max(0, Math.min(SLIDES.length - 1, n));
+  if (next === idx && frame.src) return;
+  idx = next;
+  const slide = SLIDES[idx];
+  frame.src = slide.file;
+  if (slide.group === 'main') hud.textContent = `${slide.label} · ${String(MAIN_COUNT).padStart(2,'0')}`;
+  else hud.textContent = `appendix · ${slide.label.replace('a','0')}`;
+  if (history.replaceState) history.replaceState(null, '', `#${idx + 1}`);
+  if (opts.flash) showFlash(slide.label);
+}
+
+function fromHash() {
+  const m = location.hash.match(/^#(\d+)$/);
+  if (m) go(parseInt(m[1], 10) - 1);
+  else go(0);
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  switch(e.key) {
+    case 'ArrowRight': case ' ': case 'PageDown': case 'n': case 'j':
+      e.preventDefault(); go(idx + 1); break;
+    case 'ArrowLeft': case 'PageUp': case 'p': case 'k':
+      e.preventDefault(); go(idx - 1); break;
+    case 'Home': e.preventDefault(); go(0); break;
+    case 'End':  e.preventDefault(); go(SLIDES.length - 1); break;
+    case 'f': case 'F':
+      e.preventDefault();
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+      break;
+    case 'Escape':
+      if (document.fullscreenElement) document.exitFullscreen();
+      else location.href = 'index.html';
+      break;
+    case 'g': case 'G':
+      location.href = 'index.html'; break;
+    case 'h': case 'H':
+      hud.style.opacity = (hud.style.opacity === '0') ? '' : '0'; break;
+    case 'a': case 'A':
+      e.preventDefault(); go(MAIN_COUNT, { flash: true }); break;
+  }
+  if (/^[0-9]$/.test(e.key)) {
+    const n = parseInt(e.key, 10);
+    go(n === 0 ? 9 : n - 1, { flash: true });
+  }
+});
+
+document.querySelectorAll('.click-zones > div').forEach(z => {
+  z.addEventListener('click', () => {
+    if (z.dataset.action === 'next') go(idx + 1);
+    else go(idx - 1);
+  });
+});
+
+let idleTimer;
+function showCursor() {
+  document.body.classList.remove('idle');
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => document.body.classList.add('idle'), 2500);
+}
+document.addEventListener('mousemove', showCursor);
+showCursor();
+
+window.addEventListener('hashchange', fromHash);
+fit();
+fromHash();
+</script>
+</body>
+</html>
