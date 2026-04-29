@@ -5,86 +5,111 @@
 <link rel="stylesheet" href="_shared.css">
 <style>
 html, body { background: var(--cream-warm); }
-.slide { background: var(--cream-warm); justify-content: flex-start; padding-top: 170px; }
-.slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
+.slide { background: var(--cream-warm); justify-content: flex-start; padding-top: 140px; }
+.slide .eyebrow { margin-bottom: 24px; color: var(--coral-deep); }
 .slide .headline {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: 80px;
+  font-size: 76px;
   letter-spacing: -0.022em;
   line-height: 1.05;
-  max-width: 26ch;
-  margin-bottom: 56px;
-}
-.bullets {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  max-width: 1500px;
+  max-width: 24ch;
   margin-bottom: 48px;
 }
-.bullet {
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1700px;
+}
+.row {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 28px;
+  grid-template-columns: 320px 1fr;
+  gap: 36px;
   align-items: baseline;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   border-bottom: 1px solid var(--line);
 }
-.bullet:last-child { border-bottom: none; }
-.bullet .num {
+.row:last-child { border-bottom: none; padding-bottom: 0; }
+.row .when {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-weight: 300;
   color: var(--coral);
-  font-size: 48px;
-  line-height: 1;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
-.bullet .text {
+.row .when strong {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--coral);
+  display: block;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+.row .what ul { list-style: none; }
+.row .what li {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 34px;
-  line-height: 1.35;
+  font-size: 22px;
+  line-height: 1.4;
   color: var(--ink);
   font-weight: 400;
   letter-spacing: -0.005em;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 8px;
 }
-.bullet .text strong { color: var(--coral); font-weight: 400; font-style: italic; }
-.tag {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-weight: 300;
+.row .what li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
   color: var(--coral);
-  font-size: 36px;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  max-width: 50ch;
 }
+.row .what li:last-child { margin-bottom: 0; }
+.row .what strong { color: var(--coral); font-weight: 400; font-style: italic; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
-  <p class="eyebrow">appendix · 04 — why us</p>
-  <h1 class="headline">we don't have an attention-economics background. we have an <span class="accent">AI capabilities</span> one.</h1>
-  <div class="bullets">
-    <div class="bullet">
-      <div class="num">01</div>
-      <div class="text">the past year: building agent <strong>harnesses</strong> for Mandarins and ARC.</div>
+  <div class="logo-mark"><img src="giftly_logo.png" alt=""></div>
+  <p class="eyebrow">appendix · 04 — the path</p>
+  <h1 class="headline">three phases. <span class="accent">12 months</span> to seed.</h1>
+  <div class="timeline">
+    <div class="row">
+      <div class="when">pre-PearX<br><strong>now → Jul 2026</strong></div>
+      <div class="what">
+        <ul>
+          <li>contributor network <strong>50 → 5,000</strong>, brand network <strong>7 → 300</strong> — all organic</li>
+          <li>ship v1 product: creator + brand portals, gifting workflow</li>
+          <li>first <strong>MCP integration</strong> live</li>
+        </ul>
+      </div>
     </div>
-    <div class="bullet">
-      <div class="num">02</div>
-      <div class="text">research toolkit: <strong>Bayesian inverse planning</strong>, human-AI interaction, decision-making under limited noisy human input.</div>
+    <div class="row">
+      <div class="when">PearX<br><strong>Jul → Oct 2026</strong></div>
+      <div class="what">
+        <ul>
+          <li><strong>3+ live agent integrations</strong> with public case studies — ChatGPT App, Perplexity Plugin, Claude integration</li>
+          <li><strong>10,000+ contributors</strong> (creators + expert evaluators), <strong>500+ brands</strong>, all organic</li>
+          <li>trust study preprinted on arXiv by Demo Day — "people trust agent recommendations more when those recommendations read Giftly signal"</li>
+        </ul>
+      </div>
     </div>
-    <div class="bullet">
-      <div class="num">03</div>
-      <div class="text">ethan: <strong>8 publications</strong>, patent pending. builds in a day what takes most people a week.</div>
-    </div>
-    <div class="bullet">
-      <div class="num">04</div>
-      <div class="text">most people in this space don't know this toolkit exists.</div>
+    <div class="row">
+      <div class="when">post-Demo Day<br><strong>Oct 2026 → Jul 2027</strong></div>
+      <div class="what">
+        <ul>
+          <li>trust study peer-reviewed</li>
+          <li><strong>4+ agent surfaces</strong> live with measurable share of recommendations</li>
+          <li>network compounds: <strong>1,500+ brands</strong>, expert evaluators across <strong>15+ verticals</strong></li>
+          <li>seed round closed at <strong>$5–8M</strong></li>
+        </ul>
+      </div>
     </div>
   </div>
-  <p class="tag">the proof is in the pudding — 50 creators, 7 brands, $300M, all from cold outreach in a week.</p>
   <div class="footer">
     <span>giftly</span>
     <span>appendix · 04</span>

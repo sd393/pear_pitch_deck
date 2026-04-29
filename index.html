@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Giftly · Deck Index</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+html, body { width: auto; height: auto; min-height: 100vh; overflow: auto; }
+body { padding: 56px 64px; }
+h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 56px; letter-spacing: -0.022em; margin-bottom: 8px; }
+.sub { font-family: 'Instrument Sans', sans-serif; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-warm); margin-bottom: 40px; }
+h2 { font-family: 'Instrument Sans', sans-serif; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted-warm); font-weight: 500; margin: 32px 0 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+a.card {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+a.card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(42,26,18,0.08); }
+a.card .thumb { aspect-ratio: 16/9; background: var(--cream-warm) center/cover no-repeat; }
+a.card .meta { padding: 14px 16px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+a.card .name { font-family: 'Fraunces', Georgia, serif; font-size: 20px; }
+a.card .id { font-family: 'Instrument Sans', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-warm); }
+.onepager .thumb { aspect-ratio: 8.5/11; background-size: cover; }
+</style>
+</head>
+<body>
+<h1>giftly</h1>
+<div class="sub">deck · live preview</div>
+
+<h2>Main deck</h2>
+<div class="grid">
+  <a class="card" href="slide-1.html"><div class="thumb" style="background-image:url('slide-1.png')"></div><div class="meta"><span class="name">title</span><span class="id">01</span></div></a>
+  <a class="card" href="slide-2.html"><div class="thumb" style="background:var(--cream-warm)"></div><div class="meta"><span class="name">market</span><span class="id">02</span></div></a>
+  <a class="card" href="slide-3.html"><div class="thumb" style="background-image:url('slide-3.png')"></div><div class="meta"><span class="name">problem</span><span class="id">03</span></div></a>
+  <a class="card" href="slide-4.html"><div class="thumb" style="background-image:url('slide-4.png')"></div><div class="meta"><span class="name">answer</span><span class="id">04</span></div></a>
+  <a class="card" href="slide-5.html"><div class="thumb" style="background-image:url('slide-5.png')"></div><div class="meta"><span class="name">trust layer</span><span class="id">05</span></div></a>
+  <a class="card" href="slide-6.html"><div class="thumb" style="background-image:url('slide-6.png')"></div><div class="meta"><span class="name">how it works</span><span class="id">06</span></div></a>
+  <a class="card" href="slide-7.html"><div class="thumb" style="background-image:url('slide-7.png')"></div><div class="meta"><span class="name">traction</span><span class="id">07</span></div></a>
+  <a class="card" href="slide-8.html"><div class="thumb" style="background-image:url('slide-8.png')"></div><div class="meta"><span class="name">closing</span><span class="id">08</span></div></a>
+</div>
+
+<h2>Appendix</h2>
+<div class="grid">
+  <a class="card" href="slide-a1.html"><div class="thumb" style="background-image:url('slide-a1.png')"></div><div class="meta"><span class="name">why not labs</span><span class="id">a1</span></div></a>
+  <a class="card" href="slide-a2.html"><div class="thumb" style="background-image:url('slide-a2.png')"></div><div class="meta"><span class="name">why not Mercor</span><span class="id">a2</span></div></a>
+  <a class="card" href="slide-a3.html"><div class="thumb" style="background:var(--cream)"></div><div class="meta"><span class="name">team / why us</span><span class="id">a3</span></div></a>
+  <a class="card" href="slide-a4.html"><div class="thumb" style="background:var(--cream-warm)"></div><div class="meta"><span class="name">the path</span><span class="id">a4</span></div></a>
+  <a class="card" href="slide-a5.html"><div class="thumb" style="background:var(--cream)"></div><div class="meta"><span class="name">what we need</span><span class="id">a5</span></div></a>
+  <a class="card" href="slide-a6.html"><div class="thumb" style="background-image:url('slide-a6.png')"></div><div class="meta"><span class="name">pmf</span><span class="id">a6</span></div></a>
+</div>
+
+<h2>One-pager</h2>
+<div class="grid">
+  <a class="card onepager" href="onepager.html"><div class="thumb" style="background-image:url('giftly-onepager-preview.png')"></div><div class="meta"><span class="name">one-pager</span><span class="id">letter</span></div></a>
+</div>
+</body>
+</html>

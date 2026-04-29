@@ -5,82 +5,107 @@
 <link rel="stylesheet" href="_shared.css">
 <style>
 html, body { background: var(--cream); }
-.slide { background: var(--cream); justify-content: flex-start; padding-top: 170px; }
-.slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
+.slide { background: var(--cream); justify-content: flex-start; padding-top: 120px; }
+.slide .eyebrow { margin-bottom: 24px; color: var(--coral-deep); }
 .slide .headline {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: 88px;
+  font-size: 64px;
   letter-spacing: -0.022em;
   line-height: 1.05;
-  max-width: 22ch;
-  margin-bottom: 56px;
+  max-width: 32ch;
+  margin-bottom: 40px;
 }
-.rows {
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  max-width: 1700px;
+  margin-bottom: 36px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 26px 24px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  max-width: 1600px;
-  margin-bottom: 48px;
+  gap: 12px;
 }
-.row {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 36px;
-  align-items: baseline;
-  padding-bottom: 22px;
-  border-bottom: 1px solid var(--line);
+.card .role {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--coral-deep);
+  font-weight: 600;
 }
-.row:last-child { border-bottom: none; }
-.row .key {
+.card .name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.card .bio {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+.card .bio strong { color: var(--coral); font-weight: 400; font-style: italic; }
+.card .quote {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-weight: 300;
   color: var(--coral);
-  font-size: 40px;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
-}
-.row .val {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 32px;
+  font-size: 18px;
   line-height: 1.35;
-  color: var(--ink);
-  font-weight: 400;
   letter-spacing: -0.005em;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
 }
 .tag {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-weight: 300;
   color: var(--coral);
-  font-size: 32px;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  max-width: 56ch;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  max-width: 100ch;
 }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
-  <p class="eyebrow">appendix · 03 — why not Mercor</p>
-  <h1 class="headline">wrong customer. wrong economics. wrong data.</h1>
-  <div class="rows">
-    <div class="row">
-      <div class="key">wrong customer</div>
-      <div class="val">Mercor sells to AI labs (RLHF for capability training). brand-side affiliate teams are a different buyer with different sales cycle, price point, and metric.</div>
+  <div class="logo-mark"><img src="giftly_logo.png" alt=""></div>
+  <p class="eyebrow">appendix · 03 — why us</p>
+  <h1 class="headline">we don't come from attention economics. we come from <span class="accent">AI capabilities</span>.</h1>
+  <div class="team">
+    <div class="card">
+      <div class="role">engineering</div>
+      <div class="name">Ethan Zhou</div>
+      <div class="bio">Berkeley · researcher at the Behavioral & Analytics Lab studying <strong>how humans trust AI</strong> to make decisions on their behalf — the core question of Giftly. <strong>8 publications</strong> (2 IEEE ML), patent pending.</div>
+      <div class="quote">"the right engineer to build the foundational dataset every shopping agent will run on."</div>
     </div>
-    <div class="row">
-      <div class="key">wrong economics</div>
-      <div class="val">Mercor pays experts hourly. we get eval data as a byproduct of brand-funded creator commissions — zero labor cost to us. capital advantage flips.</div>
+    <div class="card">
+      <div class="role">research + design</div>
+      <div class="name">Armaan Priyadarshan</div>
+      <div class="bio">Dartmouth · AI capabilities + reasoning research. lead on <strong>ARC-AGI-3</strong> — the frontier benchmark for agent decisions under noisy, limited data. our system has beaten frontier LLMs and is closing on human baselines.</div>
+      <div class="quote">"Giftly is the same question at the scale of every product an agent will ever buy."</div>
     </div>
-    <div class="row">
-      <div class="key">wrong data</div>
-      <div class="val">paid evaluators with no audience produce judgment without behavioral validation. that's structurally what gameable reviews already are.</div>
+    <div class="card">
+      <div class="role">strategy + commerce</div>
+      <div class="name">Samarjit Deshmukh</div>
+      <div class="bio">Dartmouth · debate national semifinalist, ranked <strong>3rd of 16,000</strong> senior year. 12 months daily research on AI × consumer commerce — data acquisition law, creator compensation, ecommerce disputes.</div>
+      <div class="quote">"the exact knowledge this entire company rests on."</div>
     </div>
   </div>
-  <p class="tag">the real threat is a commerce platform with brand relationships. but the trust layer has to be neutral — same conflict the labs have.</p>
+  <p class="tag">Ethan and Armaan: best friends since high school — apps, an earmold manufacturing business. Armaan and Samarjit: 100+ nights in the CS basement, 12 projects, 3 hackathons in SF. last week we skipped school and moved into Ethan's dorm.</p>
   <div class="footer">
     <span>giftly</span>
     <span>appendix · 03</span>

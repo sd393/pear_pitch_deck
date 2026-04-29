@@ -4,68 +4,76 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="_shared.css">
 <style>
-html, body { background: var(--cream); }
-.slide { background: var(--cream); justify-content: flex-start; padding-top: 200px; }
+html, body { background: var(--cream-warm); }
+.slide { background: var(--cream-warm); justify-content: flex-start; padding-top: 180px; }
 .slide .headline {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: 96px;
+  font-size: 100px;
   letter-spacing: -0.022em;
   line-height: 1.05;
   max-width: 22ch;
-  margin-bottom: 88px;
+  margin-bottom: 72px;
 }
-.metrics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px 96px;
-  max-width: 1500px;
+.steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1300px;
+  margin-bottom: 56px;
 }
-.metric { display: flex; flex-direction: column; gap: 12px; }
-.metric .num {
+.step {
+  display: flex;
+  gap: 36px;
+  align-items: baseline;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+}
+.step:last-child { border-bottom: none; }
+.step-num {
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 300;
   font-style: italic;
-  font-size: 96px;
   color: var(--coral);
+  font-size: 56px;
+  font-weight: 300;
   line-height: 1;
-  letter-spacing: -0.025em;
+  flex-shrink: 0;
+  width: 80px;
 }
-.metric .label {
+.step-text {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 32px;
+  font-size: 44px;
+  line-height: 1.2;
   color: var(--ink);
   font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
+}
+.tag {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 38px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  max-width: 38ch;
 }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
-  <h1 class="headline">in <span class="accent">1 week</span>, our network secured:</h1>
-  <div class="metrics">
-    <div class="metric">
-      <div class="num">50</div>
-      <div class="label">vetted creators</div>
-    </div>
-    <div class="metric">
-      <div class="num">~2M</div>
-      <div class="label">combined reach</div>
-    </div>
-    <div class="metric">
-      <div class="num">7</div>
-      <div class="label">official brand partnerships</div>
-    </div>
-    <div class="metric">
-      <div class="num">$300M</div>
-      <div class="label">combined partner valuation</div>
-    </div>
-  </div>
+  <div class="logo-mark"><img src="giftly_logo.png" alt=""></div>
+  <h1 class="headline"><span class="accent">today</span>, our evaluators are <span class="accent">content creators</span>.</h1>
+  <ol class="steps">
+    <li class="step"><span class="step-num">01</span><span class="step-text">brands send creators free products</span></li>
+    <li class="step"><span class="step-num">02</span><span class="step-text">creators post only if they love them</span></li>
+    <li class="step"><span class="step-num">03</span><span class="step-text">creators earn affiliate commission on every sale</span></li>
+  </ol>
+  <p class="tag">every match adds evaluation data to the long-term dataset.</p>
   <div class="footer">
     <span>giftly</span>
-    <span>06 · 07</span>
+    <span>06 · 08</span>
   </div>
 </div>
 </body>

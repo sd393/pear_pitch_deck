@@ -4,68 +4,68 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="_shared.css">
 <style>
-html, body { background: var(--coral); }
-.slide {
-  background: var(--coral);
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.slide .logo-mark {
-  position: static;
-  width: 156px;
-  height: 156px;
-  margin: 0 auto 56px;
-  filter: brightness(0) invert(1);
-}
-.slide .eyebrow {
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 48px;
-}
+html, body { background: var(--cream); }
+.slide { background: var(--cream); justify-content: flex-start; padding-top: 200px; }
 .slide .headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 96px;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+  max-width: 22ch;
+  margin-bottom: 88px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px 96px;
+  max-width: 1500px;
+}
+.metric { display: flex; flex-direction: column; gap: 12px; }
+.metric .num {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 300;
   font-style: italic;
-  font-size: 116px;
-  letter-spacing: -0.022em;
-  line-height: 1.05;
-  margin-bottom: 64px;
-  color: #fff;
-  max-width: 24ch;
-}
-.slide .sub {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 24px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: rgba(255,255,255,0.85);
-}
-.slide .url {
-  display: inline-block;
-  background: #fff;
+  font-size: 96px;
   color: var(--coral);
-  font-weight: 500;
-  font-family: 'Instrument Sans', sans-serif;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+.metric .label {
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 32px;
-  padding: 22px 48px;
-  margin-top: 32px;
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.25;
   letter-spacing: -0.005em;
 }
-.slide .footer { color: rgba(255,255,255,0.6); left: 128px; right: 128px; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
-  <p class="eyebrow">the bet</p>
-  <h1 class="headline">the future of agentic commerce will run on Giftly.</h1>
-  <p class="sub">the trust layer for agent commerce</p>
-  <div class="url">trygiftly.com</div>
+  <div class="logo-mark"><img src="giftly_logo.png" alt=""></div>
+  <h1 class="headline">in <span class="accent">1 week</span>, our network secured:</h1>
+  <div class="metrics">
+    <div class="metric">
+      <div class="num">50</div>
+      <div class="label">vetted creators</div>
+    </div>
+    <div class="metric">
+      <div class="num">~2M</div>
+      <div class="label">combined reach</div>
+    </div>
+    <div class="metric">
+      <div class="num">7</div>
+      <div class="label">official brand partnerships</div>
+    </div>
+    <div class="metric">
+      <div class="num">$300M</div>
+      <div class="label">combined partner valuation</div>
+    </div>
+  </div>
   <div class="footer">
     <span>giftly</span>
-    <span>07 · 07</span>
+    <span>07 · 08</span>
   </div>
 </div>
 </body>

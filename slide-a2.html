@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="_shared.css">
 <style>
-html, body { background: var(--cream-warm); }
-.slide { background: var(--cream-warm); justify-content: flex-start; padding-top: 180px; }
+html, body { background: var(--cream); }
+.slide { background: var(--cream); justify-content: flex-start; padding-top: 170px; }
 .slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
 .slide .headline {
   font-family: 'Fraunces', Georgia, serif;
@@ -14,66 +14,73 @@ html, body { background: var(--cream-warm); }
   letter-spacing: -0.022em;
   line-height: 1.05;
   max-width: 22ch;
-  margin-bottom: 64px;
+  margin-bottom: 56px;
 }
-.quote-block {
-  border-left: 4px solid var(--coral);
-  padding: 28px 36px;
-  background: rgba(255,255,255,0.5);
-  max-width: 1500px;
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1600px;
   margin-bottom: 48px;
 }
-.quote-label {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--coral-deep);
-  font-weight: 600;
-  margin-bottom: 14px;
+.row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 36px;
+  align-items: baseline;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
 }
-.quote-text {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 1.35;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.body {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 32px;
-  line-height: 1.4;
-  color: var(--ink);
-  max-width: 50ch;
-  margin-bottom: 48px;
-  font-weight: 400;
-}
-.body strong { color: var(--coral); font-weight: 400; font-style: italic; }
-.tag {
+.row:last-child { border-bottom: none; }
+.row .key {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-weight: 300;
   color: var(--coral);
   font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.row .val {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 32px;
+  line-height: 1.35;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+.tag {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral);
+  font-size: 32px;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  max-width: 44ch;
+  max-width: 56ch;
 }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="logo-mark"><img src="../../public/apple-icon.png" alt=""></div>
-  <p class="eyebrow">appendix · 02 — why not the labs</p>
-  <h1 class="headline">they've already <span class="accent">said</span> they won't.</h1>
-  <div class="quote-block">
-    <div class="quote-label">openai on instant checkout</div>
-    <div class="quote-text">"product results are organic and unsponsored, ranked purely on relevance. merchant payments don't influence ChatGPT's product results."</div>
+  <div class="logo-mark"><img src="giftly_logo.png" alt=""></div>
+  <p class="eyebrow">appendix · 02 — why not Mercor</p>
+  <h1 class="headline">wrong customer. wrong economics. wrong data.</h1>
+  <div class="rows">
+    <div class="row">
+      <div class="key">wrong customer</div>
+      <div class="val">Mercor sells to AI labs (RLHF for capability training). brand-side affiliate teams are a different buyer with different sales cycle, price point, and metric.</div>
+    </div>
+    <div class="row">
+      <div class="key">wrong economics</div>
+      <div class="val">Mercor pays experts hourly. we get eval data as a byproduct of brand-funded creator commissions — zero labor cost to us. capital advantage flips.</div>
+    </div>
+    <div class="row">
+      <div class="key">wrong data</div>
+      <div class="val">paid evaluators with no audience produce judgment without behavioral validation. that's structurally what gameable reviews already are.</div>
+    </div>
   </div>
-  <p class="body">the moment they pick winners, they lose <strong>neutrality</strong> — and neutrality is the entire reason consumers trust agents to shop. they need an external source of ground truth. right now, they're scraping it from Wirecutter and Reddit — exactly the polluted data we started Giftly to replace.</p>
-  <p class="tag">we're not their competitor. we're the missing infrastructure.</p>
+  <p class="tag">the real threat is a commerce platform with brand relationships. but the trust layer has to be neutral — same conflict the labs have.</p>
   <div class="footer">
     <span>giftly</span>
     <span>appendix · 02</span>
