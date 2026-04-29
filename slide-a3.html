@@ -5,78 +5,50 @@
 <link rel="stylesheet" href="_shared.css">
 <style>
 html, body { background: var(--cream); }
-.slide { background: var(--cream); justify-content: flex-start; padding-top: 120px; }
-.slide .eyebrow { margin-bottom: 24px; color: var(--coral-deep); }
+.slide { background: var(--cream); justify-content: flex-start; padding-top: 180px; }
+.slide .eyebrow { margin-bottom: 28px; color: var(--coral-deep); }
 .slide .headline {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: 64px;
+  font-size: 80px;
   letter-spacing: -0.022em;
   line-height: 1.05;
-  max-width: 32ch;
-  margin-bottom: 40px;
+  max-width: 28ch;
+  margin-bottom: 100px;
 }
 .team {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 28px;
+  gap: 88px;
   max-width: 1700px;
-  margin-bottom: 36px;
+  margin-bottom: 80px;
 }
-.card {
-  background: #fff;
-  border: 1px solid var(--line);
-  padding: 26px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.card .role {
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--coral-deep);
-  font-weight: 600;
-}
-.card .name {
+.person .name {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
   color: var(--ink);
   letter-spacing: -0.01em;
   line-height: 1.1;
-  margin-bottom: 4px;
+  margin-bottom: 18px;
 }
-.card .bio {
+.person .bio {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 22px;
+  line-height: 1.5;
   color: var(--ink-soft);
   font-weight: 400;
+  max-width: 28ch;
 }
-.card .bio strong { color: var(--coral); font-weight: 400; font-style: italic; }
-.card .quote {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-weight: 300;
-  color: var(--coral);
-  font-size: 18px;
-  line-height: 1.35;
-  letter-spacing: -0.005em;
-  margin-top: auto;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-}
+.person .bio strong { color: var(--coral); font-weight: 400; font-style: italic; }
 .tag {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-weight: 300;
   color: var(--coral);
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.4;
-  letter-spacing: -0.005em;
-  max-width: 100ch;
+  letter-spacing: -0.01em;
 }
 </style>
 </head>
@@ -86,26 +58,20 @@ html, body { background: var(--cream); }
   <p class="eyebrow">appendix · 03 — why us</p>
   <h1 class="headline">we come from <span class="accent">AI capabilities</span>.</h1>
   <div class="team">
-    <div class="card">
-      <div class="role">engineering</div>
+    <div class="person">
       <div class="name">Ethan Zhou</div>
-      <div class="bio">Berkeley · researcher at the Behavioral & Analytics Lab studying <strong>how humans trust AI</strong> to make decisions on their behalf — the core question of Giftly. <strong>8 publications</strong> (2 IEEE ML), patent pending.</div>
-      <div class="quote">"the right engineer to build the foundational dataset every shopping agent will run on."</div>
+      <div class="bio">Berkeley · researches how humans trust AI to decide on their behalf. <strong>8 publications</strong>, patent pending.</div>
     </div>
-    <div class="card">
-      <div class="role">research + design</div>
+    <div class="person">
       <div class="name">Armaan Priyadarshan</div>
-      <div class="bio">Dartmouth · AI capabilities + reasoning research. lead on <strong>ARC-AGI-3</strong> — the frontier benchmark for agent decisions under noisy, limited data. our system has beaten frontier LLMs and is closing on human baselines.</div>
-      <div class="quote">"Giftly is the same question at the scale of every product an agent will ever buy."</div>
+      <div class="bio">Dartmouth · lead on <strong>ARC-AGI-3</strong>, the frontier benchmark for agent decisions under noisy data.</div>
     </div>
-    <div class="card">
-      <div class="role">strategy + commerce</div>
+    <div class="person">
       <div class="name">Samarjit Deshmukh</div>
-      <div class="bio">Dartmouth · debate national semifinalist, ranked <strong>3rd of 16,000</strong> senior year. 12 months daily research on AI × consumer commerce — data acquisition law, creator compensation, ecommerce disputes.</div>
-      <div class="quote">"the exact knowledge this entire company rests on."</div>
+      <div class="bio">Dartmouth · 12 months researching <strong>AI × consumer commerce</strong> — data law, creator compensation, ecommerce disputes.</div>
     </div>
   </div>
-  <p class="tag">Ethan and Armaan: best friends since high school — apps, an earmold manufacturing business. Armaan and Samarjit: 100+ nights in the CS basement, 12 projects, 3 hackathons in SF. last week we skipped school and moved into Ethan's dorm.</p>
+  <p class="tag">100+ nights in the CS basement. last week we moved into Ethan's dorm.</p>
   <div class="footer">
     <span>giftly</span>
     <span>appendix · 03</span>
